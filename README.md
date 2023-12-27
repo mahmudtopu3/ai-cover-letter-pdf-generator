@@ -32,8 +32,6 @@ Simple app to generate cover letter pdf using django, langchain, open ai api and
     ```
 
     ```
- ## Contributing
 
-Contributions to the Django Video Encoding and Streaming App are welcome! Feel free to open issues, submit pull requests, or provide feedback.
 
 
