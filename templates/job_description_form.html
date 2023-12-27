@@ -1,0 +1,49 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!-- Rest of your HTML code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Letter Generator</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 col-md-5">
+        <h2>AI Cover Letter Generator</h2>  
+        <form method="post" class="mt-3">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.name.label_tag }} {{ form.name|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.title.label_tag }} {{ form.title|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label_tag }} {{ form.email|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.phone.label_tag }} {{ form.phone|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.linkedin.label_tag }} {{ form.linkedin|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.year_of_experience.label_tag }} {{ form.year_of_experience|add_class:'form-control' }}
+            </div>
+            <div class="form-group">
+                {{ form.job_description.label_tag }} {{ form.job_description|add_class:'form-control' }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
